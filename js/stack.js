@@ -101,7 +101,8 @@ function check1(){
 					myGamePiece.width=object[object.length-1].width;
 			}
 			else if(myGamePiece.x>object[object.length-1].x){
-				myGamePiece.width=object[object.length-1].width-(myGamePiece.x-object[object.length-1].x);
+				if(object[object.length-1].width-(myGamePiece.x-object[object.length-1].x)<myGamePiece.width)
+					myGamePiece.width=object[object.length-1].width-(myGamePiece.x-object[object.length-1].x);
 			}
 			else
 				if(myGamePiece.width>object[object.length-1].width)
